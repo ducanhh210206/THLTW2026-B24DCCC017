@@ -116,9 +116,11 @@ export const layout: RunTimeLayoutConfig = ({ initialState }) => {
 		childrenRender: (dom) => (
 			<OIDCBounder>
 				<ErrorBoundary>
-					{/* <TechnicalSupportBounder> */}
-					<OneSignalBounder>{dom}</OneSignalBounder>
-					{/* </TechnicalSupportBounder> */}
+					{process.env.NODE_ENV === 'production' ? (
+						<OneSignalBounder>{dom}</OneSignalBounder>
+					) : (
+						dom
+					)}
 				</ErrorBoundary>
 			</OIDCBounder>
 		),
