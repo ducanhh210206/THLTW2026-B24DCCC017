@@ -42,7 +42,16 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
-
+	{
+    	path: '/baitap01',
+    	name: 'BàiTập01-Đoán Số',
+    	component: '@/pages/BaiTap01',
+	},
+	{
+		path: '/baitap02',
+		name: 'BàiTập02-Quản Lý Học Tập',
+		component: '@/pages/BaiTap02',
+	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
@@ -95,4 +104,5 @@
 	{
 		component: './exception/404',
 	},
+	
 ];
