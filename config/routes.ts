@@ -52,6 +52,16 @@
 		name: 'BàiTập02-Quản Lý Học Tập',
 		component: '@/pages/BaiTap02',
 	},
+	{
+		path: '/keobuabao',
+		name: 'BàiTập03-Kéo Búa Bao',
+		component: '@/pages/KeoBuaBao',
+	},
+	{
+		path: '/quan-ly',
+		name: 'BàiTập04-Quản Lý Ngân Hàng',
+		component: '@/pages/QuanLyNganHang',
+	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
