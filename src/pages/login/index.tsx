@@ -1,70 +1,41 @@
-import React from "react";
-import { Card, Form, Input, Button, message } from "antd";
+import { Form, Input, Button, Card, message } from "antd";
 import { history } from "umi";
+import { storage } from "@/utils/storage";
 
 export default () => {
+  const onFinish = (values: any) => {
+    const { username } = values;
 
-  const onFinish = (values:any) => {
+    let user;
 
-    const {username,password} = values;
-
-    if(username==="admin" && password==="123"){
-      localStorage.setItem("role","admin");
-      history.push("/baitap05");
-      return;
+    if (username === "admin") {
+      user = { id: 1, role: "admin", name: "Admin" };
+    } else if (username === "staff") {
+      user = { id: 2, role: "staff", name: "Nhân viên" };
+    } else {
+      user = { id: 3, role: "customer", name: "Khách" };
     }
 
-    if(username==="staff" && password==="123"){
-      localStorage.setItem("role","staff");
-      history.push("/baitap05");
-      return;
-    }
-
-    message.error("Sai tài khoản");
-
+    storage.set("user", user);
+    message.success("Đăng nhập thành công");
+    history.push("/BaiTap05");
   };
 
-  return(
+  return (
+    <Card title="Login" style={{ width: 400, margin: "100px auto" }}>
+      <Form onFinish={onFinish}>
+        <Form.Item name="username" rules={[{ required: true }]}>
+          <Input placeholder="admin / staff / customer" />
+        </Form.Item>
 
-    <div
-      style={{
-        height:"100vh",
-        display:"flex",
-        justifyContent:"center",
-        alignItems:"center"
-      }}
-    >
+        <Form.Item name="password">
+          <Input.Password placeholder="nhập gì cũng được" />
+        </Form.Item>
 
-      <Card title="Booking Service Login" style={{width:350}}>
-
-        <Form layout="vertical" onFinish={onFinish}>
-
-          <Form.Item
-            name="username"
-            label="Username"
-            rules={[{required:true}]}
-          >
-            <Input/>
-          </Form.Item>
-
-          <Form.Item
-            name="password"
-            label="Password"
-            rules={[{required:true}]}
-          >
-            <Input.Password/>
-          </Form.Item>
-
-          <Button type="primary" htmlType="submit" block>
-            Login
-          </Button>
-
-        </Form>
-
-      </Card>
-
-    </div>
-
-  )
-
-}
+        <Button type="primary" htmlType="submit" block>
+          Login
+        </Button>
+      </Form>
+    </Card>
+  );
+};
