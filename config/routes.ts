@@ -62,6 +62,20 @@
 		name: 'BàiTập04-Quản Lý Ngân Hàng',
 		component: '@/pages/QuanLyNganHang',
 	},
+	{
+    path: "/login",
+	name: "Login",
+    component: "@/pages/login",
+  	},
+  	{
+    path: "/baitap05",
+	name: "BàiTập05-Đặt Lịch Hẹn",
+    component: "@/pages/BaiTap05",
+  	},
+  	{
+    path: "/",
+    redirect: "/login",
+  	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
