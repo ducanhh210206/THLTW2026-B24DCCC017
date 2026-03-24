@@ -76,6 +76,28 @@
     path: "/",
     redirect: "/login",
   	},
+	{
+    path: '/baitap06',
+    name: 'Bài Tập 06',
+    icon: 'smile',
+    routes: [
+      	{
+        path: '/baitap06/search',
+        name: 'Tra cứu',
+        component: './BaiTap06/Search', 
+      	},
+      	{
+        path: '/baitap06/manage',
+        name: 'Quản lý',
+        component: './BaiTap06/Manage',
+      	},
+      	{
+        path: '/baitap06/config',
+        name: 'Cấu hình',
+        component: './BaiTap06/Config',
+      	},
+      ],
+  	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
