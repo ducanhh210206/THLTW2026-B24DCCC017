@@ -98,6 +98,32 @@
       	},
       ],
   	},
+	{
+    path: '/baitap07',
+    name: 'Bài tập 07',
+    routes: [
+      {
+        path: '/baitap07/club',
+        name: 'CLB',
+        component: '@/pages/BaiTap07/club',
+      },
+      {
+        path: '/baitap07/application',
+        name: 'Đơn đăng ký',
+        component: '@/pages/BaiTap07/application',
+      },
+      {
+        path: '/baitap07/member',
+        name: 'Thành viên',
+        component: '@/pages/BaiTap07/member',
+      },
+      {
+        path: '/baitap07/dashboard',
+        name: 'Thống kê',
+        component: '@/pages/BaiTap07/dashboard',
+      },
+    ],
+  	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
