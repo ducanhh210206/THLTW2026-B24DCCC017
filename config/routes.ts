@@ -79,7 +79,6 @@
 	{
     path: '/baitap06',
     name: 'Bài Tập 06',
-    icon: 'smile',
     routes: [
       	{
         path: '/baitap06/search',
@@ -123,6 +122,18 @@
         component: '@/pages/BaiTap07/dashboard',
       },
     ],
+  	},
+	{
+    path: '/baitap08',
+    name: 'Travel Planner',
+    routes: [
+      	{ path: '/BaiTap08', component: '@/pages/BaiTap08/index' },
+      	{ path: '/BaiTap08/home', component: '@/pages/BaiTap08/Home' },
+      	{ path: '/BaiTap08/planner', component: '@/pages/BaiTap08/Planner' },
+        { path: '/BaiTap08/budget', component: '@/pages/BaiTap08/Budget' },
+      	{ path: '/BaiTap08/admin', component: '@/pages/BaiTap08/Admin' },
+      	{ path: '/BaiTap08/dashboard', component: '@/pages/BaiTap08/Dashboard' },
+      ],
   	},
 	// DANH MUC HE THONG
 	// {
