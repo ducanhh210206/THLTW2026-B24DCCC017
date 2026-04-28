@@ -48,6 +48,12 @@
 	title: 'Quản lý khóa học online',
 	component: './QuanLyKhoaHocOnline',
 	},
+	{
+	path: '/theo-doi-suc-khoe',
+	name: 'Theo dõi sức khỏe',
+	title: 'Theo dõi sức khỏe',
+	component: './TheoDoiSucKhoe',
+	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
