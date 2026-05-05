@@ -54,6 +54,12 @@
 	title: 'Theo dõi sức khỏe',
 	component: './TheoDoiSucKhoe',
 	},
+	{
+	path: '/theo-doi-cong-viec',
+	name: 'Theo dõi công việc',
+	title: 'Theo dõi công việc',
+	component: './TheoDoiCongViec',
+	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
